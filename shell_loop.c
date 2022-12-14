@@ -4,7 +4,6 @@
  * hsh - main shell loop
  * @info: the parameter & return info struct
  * @av: the argument vector from main()
- *
  * Return: 0 on success, 1 on error, or error code
  */
 int hsh(info_t *info, char **av)
@@ -42,11 +41,9 @@ int hsh(info_t *info, char **av)
 	}
 	return (builtin_ret);
 }
-
 /**
  * find_builtin - finds a builtin command
  * @info: the parameter & return info struct
- *
  * Return: -1 if builtin not found,
  *			0 if builtin executed successfully,
  *			1 if builtin found but not successful,
@@ -76,11 +73,9 @@ int find_builtin(info_t *info)
 		}
 	return (built_in_ret);
 }
-
 /**
  * find_cmd - finds a command in PATH
  * @info: the parameter & return info struct
- *
  * Return: void
  */
 void find_cmd(info_t *info)
@@ -118,11 +113,9 @@ void find_cmd(info_t *info)
 		}
 	}
 }
-
 /**
  * fork_cmd - forks a an exec thread to run cmd
  * @info: the parameter & return info struct
- *
  * Return: void
  */
 void fork_cmd(info_t *info)
